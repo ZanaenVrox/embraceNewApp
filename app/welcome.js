@@ -11,7 +11,24 @@ import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
 import { Link } from "expo-router";
+import BrandServices from "./Services/BrandServices";
+import { useEffect } from "react";
+
 const Welcome = () => {
+  // const userLogin = () => {
+  //   BrandServices.getBrands()
+  //     .then((res) => {
+  //       console.log("res", res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   userLogin();
+  // }, []);
+
   return (
     <>
       <LinearGradient
