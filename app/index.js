@@ -10,11 +10,13 @@ import {
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
-import { Link } from "expo-router";
+import { Link, useNavigation } from "expo-router";
 import BrandServices from "./Services/BrandServices";
 import { useEffect } from "react";
 
 const Welcome = () => {
+  const navigation = useNavigation();
+
   // const userLogin = () => {
   //   BrandServices.getBrands()
   //     .then((res) => {
@@ -86,9 +88,13 @@ const Welcome = () => {
                 style={styles.inputfieldnumber}
                 keyboardType="numeric"
               />
-              <TouchableOpacity style={styles.button}>
+
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate("calender")}
+              >
+                {/* <Link style={styles.button} href={{ pathname: "calender" }}> */}
                 <Text style={{ fontSize: 16, color: "#ffff" }}> Sign in</Text>
-                {/* <Link href={{ pathname: "Calender", params: { name: "" } }}> */}
                 {/* </Link> */}
               </TouchableOpacity>
             </BlurView>
