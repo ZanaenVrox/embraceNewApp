@@ -107,7 +107,7 @@ const HomeDashboard = () => {
           borderTopLeftRadius: 10,
           borderTopRightRadius: 10,
           borderColor: "#fff",
-          borderWidth:1,
+          borderWidth: 1,
           width: "90%",
           backgroundColor: "transparent",
           marginTop: -250,
