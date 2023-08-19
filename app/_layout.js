@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -483,18 +483,29 @@ export default function Layout() {
             fontSize: 18,
             color: "#9b2890",
           },
-          // headerRight: () => (
-          //   <TouchableOpacity>
-          //     <Image
-          //       style={{
-          //         width: 28,
-          //         height: 28,
-          //         resizeMode: "contain",
-          //       }}
-          //       source={require("../assets/images/bell.png")}
-          //     />
-          //   </TouchableOpacity>
-          // ),
+
+          headerLeft: () => (
+            <TouchableOpacity>
+              <Ionicons name="arrow-back" size={26} color="#9b2890" />
+            </TouchableOpacity>
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="TermsContditions"
+        options={{
+          headerShown: true,
+          // headerShadowVisible: false,
+          headerTitle: "Terms & Contditions",
+          headerStyle: {
+            backgroundColor: "#f6d9a9",
+          },
+          headerTitleAlign: "center",
+          headerTitleStyle: {
+            fontWeight: "600",
+            fontSize: 18,
+            color: "#9b2890",
+          },
           headerLeft: () => (
             <TouchableOpacity>
               <Ionicons name="arrow-back" size={26} color="#9b2890" />

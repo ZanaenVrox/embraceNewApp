@@ -36,7 +36,6 @@ const Welcome = () => {
         colors={["#E81F76", "#6F1D78"]}
         start={{ x: 0, y: 0.4 }}
         end={{ x: 1, y: 1 }}
-        
       >
         <Text
           style={{
