@@ -91,7 +91,7 @@ const Welcome = () => {
 
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate("QuestionThree")}
+                onPress={() => navigation.navigate("QuestionOne")}
               >
                 <Text style={{ fontSize: 16, color: "#ffff" }}> Sign in</Text>
               </TouchableOpacity>

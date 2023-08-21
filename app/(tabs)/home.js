@@ -21,7 +21,7 @@ const home = () => {
     >
       <View style={styles.divider} />
       <View style={styles.calendar}>
-         <CalendarStrip
+        <CalendarStrip
           // scrollable
           style={{ height: 150, marginTop: -90, paddingTop: 20 }}
           calendarHeaderStyle={{ color: "#6F1D78", fontSize: 18 }}
@@ -36,7 +36,7 @@ const home = () => {
           useIsoWeekday={false}
           // iconLeft={""}
           // iconRight={""}
-        /> 
+        />
       </View>
       <View style={styles.dividerr} />
       <ImageBackground
@@ -303,7 +303,6 @@ const home = () => {
     </LinearGradient>
   );
 };
-
 
 export default home;
 

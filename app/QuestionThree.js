@@ -86,7 +86,7 @@ const QuestionThree = () => {
                 : { color: "#6F1D78", fontSize: 16 }
             }
           >
-            Yes,i am cured now\
+            Yes,i am cured now
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -115,9 +115,9 @@ const QuestionThree = () => {
         </Link>
         {/* </TouchableOpacity> */}
         {/* <TouchableOpacity style={styles.button} onPress={handleNext}> */}
-        <Link href="/home"></Link>
-        <Text style={styles.buttonText}>Next</Text>
-
+        <Link href="/home">
+          <Text style={styles.buttonText}>Next</Text>
+        </Link>
         {/* </TouchableOpacity> */}
       </View>
     </LinearGradient>
