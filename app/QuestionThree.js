@@ -2,14 +2,15 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
+import { Link } from "expo-router";
 const QuestionThree = () => {
   const [selected, setSelected] = useState("null");
   const navigation = useNavigation();
   const handleSkip = () => {
-    navigation.navigate("HomeDashboard");
+    navigation.navigate("app/(tabs)/index.js");
   };
   const handleNext = () => {
-    navigation.navigate("HomeDashboard");
+    navigation.navigate("app/(tabs)/index.js");
   };
   return (
     <LinearGradient
@@ -108,13 +109,16 @@ const QuestionThree = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={handleSkip}>
+        {/* <TouchableOpacity style={styles.button} onPress={handleSkip}> */}
+        <Link href="/home">
           <Text style={styles.buttonText}>Skip</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={handleNext}>
-          <Text style={styles.buttonText}>Next</Text>
-          
-        </TouchableOpacity>
+        </Link>
+        {/* </TouchableOpacity> */}
+        {/* <TouchableOpacity style={styles.button} onPress={handleNext}> */}
+        <Link href="/home"></Link>
+        <Text style={styles.buttonText}>Next</Text>
+
+        {/* </TouchableOpacity> */}
       </View>
     </LinearGradient>
   );

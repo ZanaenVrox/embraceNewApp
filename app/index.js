@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
-import { Link, useNavigation } from "expo-router";
+import {  useNavigation } from "expo-router";
 import BrandServices from "./Services/BrandServices";
 import { useEffect } from "react";
 
@@ -91,11 +91,9 @@ const Welcome = () => {
 
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => navigation.navigate("calender")}
+                onPress={() => navigation.navigate("QuestionThree")}
               >
-                {/* <Link style={styles.button} href={{ pathname: "calender" }}> */}
                 <Text style={{ fontSize: 16, color: "#ffff" }}> Sign in</Text>
-                {/* </Link> */}
               </TouchableOpacity>
             </BlurView>
           </View>
