@@ -5,19 +5,26 @@ import { AntDesign } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "#E81F76"].tint,
+        // tabBarActiveTintColor: Colors[ColorScheme ?? "#E81F76"].tint,
         initialRouteName: "home",
         tabBarLabelStyle: {
           fontSize: 12,
           color: "black",
         },
+        tabBarBackground: () => (
+          <LinearGradient
+            colors={["#fae3df", "#fdc7ba"]}
+            style={{ flex: 1 }}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+          />
+        ),
       }}
     >
       <Tabs.Screen
@@ -227,7 +234,7 @@ export default function TabLayout() {
             fontSize: 12,
             color: "#E81F76",
           },
-          headerTitle: "Blogs",
+          headerTitle: "Products",
           headerTitleAlign: "center",
           headerTitleStyle: {
             fontWeight: "600",
@@ -269,7 +276,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      
     </Tabs>
   );
 }

@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
-import {  useNavigation } from "expo-router";
+import { useNavigation } from "expo-router";
 import BrandServices from "./Services/BrandServices";
 import { useEffect } from "react";
 
